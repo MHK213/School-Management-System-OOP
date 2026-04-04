@@ -1,0 +1,11 @@
+1#//#Ahmed#//#Benali#//#21#//#ahmed.benali@school.dz#//#05512345#//#Male#//#L3#//#Active
+2#//#Sara#//#Meziani#//#19#//#sara.meziani@school.dz#//#0662345678#//#Female#//#L1#//#Active
+3#//#Youcef#//#Boudiaf#//#21#//#youcef.boudiaf@school.dz#//#0773456789#//#Male#//#L3#//#Active
+4#//#Amira#//#Khelifi#//#18#//#amira.khelifi@school.dz#//#0554567890#//#Female#//#L1#//#Active
+5#//#Khalid#//#Mansouri#//#22#//#khalid.mansouri@school.dz#//#0665678901#//#Male#//#L3#//#Inactive
+6#//#Nadia#//#Tlemcani#//#20#//#nadia.tlemcani@school.dz#//#0776789012#//#Female#//#L2#//#Active
+7#//#Omar#//#Cherif#//#23#//#omar.cherif@school.dz#//#0557890123#//#Male#//#M2#//#Graduated
+8#//#Lina#//#Hadjadj#//#19#//#lina.hadjadj@school.dz#//#0668901234#//#Female#//#L1#//#Active
+9#//#Tariq#//#Bensalem#//#21#//#tariq.bensalem@school.dz#//#0779012345#//#Male#//#L3#//#Active
+10#//#Yasmine#//#Ferhat#//#18#//#yasmine.ferhat@school.dz#//#0550123456#//#Female#//#L1#//#Active
+11#//#Madi#//#Abdelheq#//#22#//#madihk@School.dz#//#07707916#//#Male#//#M1#//#Active
