@@ -98,20 +98,4 @@ public:
 		if (Status == "Graduated") return enStatus::Graduated;
 		return enStatus::EmptyS;
 	}
-
-	void Print() {
-		cout << "\nStudent Card :";
-		cout << "\n________________________________________";
-		cout << "\nID           : " << _ID;
-		cout << "\nFirst Name   : " << FirstName;
-		cout << "\nLast Name    : " << LastName;
-		cout << "\nFull Name    : " << FullName();
-		cout << "\nEmail        : " << Email;
-		cout << "\nPhone        : " << Phone;
-		cout << "\nAge          : " << _Age;
-		cout << "\nGender       : " << stGender();
-		cout << "\nLevel        : " << _Level;
-		cout << "\nStatus       : " << stStatus();
-		cout << "\n________________________________________" << endl;
-	}
 };

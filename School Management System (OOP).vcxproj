@@ -126,16 +126,23 @@
     <ClCompile Include="School Management System (OOP).cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="clsAddNewStudentScreen.h" />
     <ClInclude Include="clsCourse.h" />
     <ClInclude Include="clsDate.h" />
+    <ClInclude Include="clsDeleteStudentScreen.h" />
     <ClInclude Include="clsEnrollment.h" />
+    <ClInclude Include="clsFindStudentScreen.h" />
     <ClInclude Include="clsInputValidate.h" />
+    <ClInclude Include="clsMainScreen.h" />
     <ClInclude Include="clsPerson.h" />
+    <ClInclude Include="clsScreen.h" />
     <ClInclude Include="clsString.h" />
     <ClInclude Include="clsStudent.h" />
     <ClInclude Include="clsStudentData.h" />
     <ClInclude Include="clsStudentService.h" />
+    <ClInclude Include="clsStudentsListScreen.h" />
     <ClInclude Include="clsTeacher.h" />
+    <ClInclude Include="clsUpdateStudentScreen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
