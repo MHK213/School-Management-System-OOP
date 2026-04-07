@@ -127,11 +127,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="clsAddNewStudentScreen.h" />
+    <ClInclude Include="clsAddNewTeacherScreen.h" />
     <ClInclude Include="clsCourse.h" />
     <ClInclude Include="clsDate.h" />
     <ClInclude Include="clsDeleteStudentScreen.h" />
+    <ClInclude Include="clsDeleteTeacherScreen.h" />
     <ClInclude Include="clsEnrollment.h" />
     <ClInclude Include="clsFindStudentScreen.h" />
+    <ClInclude Include="clsFindTeacherScreen.h" />
     <ClInclude Include="clsInputValidate.h" />
     <ClInclude Include="clsMainScreen.h" />
     <ClInclude Include="clsPerson.h" />
@@ -142,7 +145,12 @@
     <ClInclude Include="clsStudentService.h" />
     <ClInclude Include="clsStudentsListScreen.h" />
     <ClInclude Include="clsTeacher.h" />
+    <ClInclude Include="clsTeacherData.h" />
+    <ClInclude Include="clsTeacherMenuScreen.h" />
+    <ClInclude Include="clsTeacherService.h" />
+    <ClInclude Include="clsTeachersListScreen.h" />
     <ClInclude Include="clsUpdateStudentScreen.h" />
+    <ClInclude Include="clsUpdateTeacherScreen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

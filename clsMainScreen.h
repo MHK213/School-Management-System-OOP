@@ -9,6 +9,7 @@
 #include "clsDeleteStudentScreen.h"
 #include "clsUpdateStudentScreen.h"
 #include "clsFindStudentScreen.h"
+#include "clsTeacherMenuScreen.h"
 
 using namespace std;
 
@@ -53,6 +54,10 @@ private:
 		clsFindStudentScreen::ShowFindStudentScreen();
 	}
 
+	static void _ShowTeacherMenuScreen() {
+		clsTeacherMenuScreen::ShowTeacherMenu();
+	}
+
 	static void _PerformMainMenuOption(enMainMenuOption MainMenuOption) {
 		switch (MainMenuOption) {
 		case enShowStudentsList: {
@@ -87,7 +92,7 @@ private:
 		}
 		case enManageTeachers: {
 			system("cls");
-			cout << "Manage Teachers Screen will be here\n";
+			_ShowTeacherMenuScreen();
 			_GoBackToMainMenu();
 			break;
 		}

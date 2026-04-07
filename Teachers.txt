@@ -1,0 +1,5 @@
+1#//#Karim#//#Bouzid#//#karim.bouzid@school.dz#//#05234135223#//#Math
+2#//#Samira#//#Hadj#//#samira.hadj@school.dz#//#0662345678#//#Physics
+3#//#Nabil#//#Messaoud#//#nabil.messaoud@school.dz#//#0773456789#//#Arabic
+4#//#Fatima#//#Zerrouk#//#fatima.zerrouk@school.dz#//#0554567890#//#History
+5#//#Yacine#//#Belhadj#//#yacine.belhadj@school.dz#//#0665678901#//#English

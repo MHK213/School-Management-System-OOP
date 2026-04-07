@@ -71,5 +71,29 @@
     <ClInclude Include="clsFindStudentScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="clsTeacherData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsTeacherService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsTeacherMenuScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsAddNewTeacherScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsTeachersListScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsDeleteTeacherScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsUpdateTeacherScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsFindTeacherScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
