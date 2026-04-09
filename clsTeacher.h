@@ -10,15 +10,26 @@ class clsTeacher : public clsPerson
 public:
 	enum enMode { EmptyMode = 0, UpdateMode = 1, AddNewMode = 2 };
 
+	enum enSpeciality {
+		spAll = 0,
+		spMath = 1,
+		spPhysics = 2,
+		spComputerScience = 3,
+		spEnglish = 4,
+		spArabic = 5,
+		spHistory = 6,
+		spEmpty = 7
+	};
+
 private:
 	int _ID;
-	string _Speciality;
+	enSpeciality _Speciality;
 	bool _MarkForDelete = false;
 	enMode _Mode;
 
 public:
 
-	clsTeacher(enMode Mode, int ID, string FirstName, string LastName, string Email, string Phone, string Speciality)
+	clsTeacher(enMode Mode, int ID, string FirstName, string LastName, string Email, string Phone, enSpeciality Speciality)
 		: clsPerson(FirstName, LastName, Email, Phone) 
 	{
 		_Mode = Mode;
@@ -34,13 +45,36 @@ public:
 	int GetID() { return _ID; }
 	__declspec(property(get = GetID)) int ID;
 
-	void SetSpeciality(string Speciality) { _Speciality = Speciality; }
-	string GetSpeciality() { return _Speciality; }
-	__declspec(property(get = GetSpeciality, put = SetSpeciality)) string Speciality;
+	void SetSpeciality(enSpeciality Speciality) { _Speciality = Speciality; }
+	enSpeciality GetSpeciality() { return _Speciality; }
+	__declspec(property(get = GetSpeciality, put = SetSpeciality)) enSpeciality Speciality;
 
 	void SetMarkForDelete(bool MarkForDelete) { _MarkForDelete = MarkForDelete; }
 	bool GetMarkForDelete() { return _MarkForDelete; }
 	__declspec(property(get = GetMarkForDelete, put = SetMarkForDelete)) bool MarkForDelete;
 
 	bool IsEmpty() { return (_Mode == enMode::EmptyMode); }
+
+	static string SpecialityToString(enSpeciality sp) {
+		switch (sp) {
+		case spMath: return "Math";
+		case spPhysics: return "Physics";
+		case spComputerScience: return "ComputerScience";
+		case spEnglish: return "English";
+		case spArabic: return "Arabic";
+		case spHistory: return "History";
+		default: return "All";
+		}
+	}
+
+	static enSpeciality StringToSpeciality(string sp) {
+		if (sp == "Math") return spMath;
+		if (sp == "Physics") return spPhysics;
+		if (sp == "ComputerScience") return spComputerScience;
+		if (sp == "English") return spEnglish;
+		if (sp == "Arabic") return spArabic;
+		if (sp == "History") return spHistory;
+
+		return spAll;
+	}
 };

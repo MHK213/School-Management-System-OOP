@@ -6,6 +6,7 @@
 #include "clsScreen.h"
 #include "clsTeacher.h"
 #include "clsTeacherService.h"
+#include "clsInputValidate.h"
 
 using namespace std;
 
@@ -18,11 +19,12 @@ private:
 		cout << "| " << left << setw(25) << Teacher.FullName();
 		cout << "| " << left << setw(25) << Teacher.Email;
 		cout << "| " << left << setw(12) << Teacher.Phone;
-		cout << "| " << left << setw(20) << Teacher.Speciality;
+		cout << "| " << left << setw(20) << clsTeacher::SpecialityToString(Teacher.Speciality);
 	}
 
 public:
 	static void ShowTeachersList() {
+
 		vector <clsTeacher> vTeachers = clsTeacherService::GetTeachersList();
 
 		string Title = "\t\t  Teacher List Screen";

@@ -18,7 +18,7 @@ public:
 		vector <string> vTeacher = clsString::Split(Line, Seprator);
 
 		return clsTeacher(clsTeacher::enMode::UpdateMode, stoi(vTeacher[0]), vTeacher[1], vTeacher[2], vTeacher[3], vTeacher[4],
-			vTeacher[5]);
+			clsTeacher::StringToSpeciality(vTeacher[5]));
 	}
 
 	static vector <clsTeacher> LoadTeachersDataFromFile() {
@@ -62,7 +62,7 @@ public:
 		stTeacherRecord += Teacher.LastName + Seprator;
 		stTeacherRecord += Teacher.Email + Seprator;
 		stTeacherRecord += Teacher.Phone + Seprator;
-		stTeacherRecord += Teacher.Speciality;
+		stTeacherRecord += clsTeacher::SpecialityToString(Teacher.Speciality);
 
 		return stTeacherRecord;
 	}

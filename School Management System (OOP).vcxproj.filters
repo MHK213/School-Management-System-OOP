@@ -95,5 +95,8 @@
     <ClInclude Include="clsFindTeacherScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="clsShowTeacherListBySpeciality.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

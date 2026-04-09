@@ -20,7 +20,7 @@ private:
 		cout << "\nFull Name    : " << Teacher.FullName();
 		cout << "\nEmail        : " << Teacher.Email;
 		cout << "\nPhone        : " << Teacher.Phone;
-		cout << "\nSpeciality   : " << Teacher.Speciality;
+		cout << "\nSpeciality   : " << clsTeacher::SpecialityToString(Teacher.Speciality);
 		cout << "\n________________________________________" << endl;
 	}
 

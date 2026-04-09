@@ -139,6 +139,7 @@
     <ClInclude Include="clsMainScreen.h" />
     <ClInclude Include="clsPerson.h" />
     <ClInclude Include="clsScreen.h" />
+    <ClInclude Include="clsShowTeacherListBySpeciality.h" />
     <ClInclude Include="clsString.h" />
     <ClInclude Include="clsStudent.h" />
     <ClInclude Include="clsStudentData.h" />

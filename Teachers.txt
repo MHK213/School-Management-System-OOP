@@ -3,3 +3,4 @@
 3#//#Nabil#//#Messaoud#//#nabil.messaoud@school.dz#//#0773456789#//#Arabic
 4#//#Fatima#//#Zerrouk#//#fatima.zerrouk@school.dz#//#0554567890#//#History
 5#//#Yacine#//#Belhadj#//#yacine.belhadj@school.dz#//#0665678901#//#English
+6#//#Hamici#//#Amir#//#amirhamici@school.dz#//#0542532523#//#ComputerScience

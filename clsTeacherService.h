@@ -11,7 +11,7 @@ class clsTeacherService
 {
 private:
 	static clsTeacher _GetEmptyTeacherObject() {
-		return clsTeacher(clsTeacher::enMode::EmptyMode, 0, "", "", "", "", "");
+		return clsTeacher(clsTeacher::enMode::EmptyMode, 0, "", "", "", "", clsTeacher::enSpeciality::spEmpty);
 	}
 
 	static void _AddNew(clsTeacher Teacher) {
@@ -48,7 +48,7 @@ public:
 		vector <clsTeacher> vTeachers = clsTeacherData::LoadTeachersDataFromFile();
 
 		for (clsTeacher& T : vTeachers) {
-			if (T.ID == ID && T.Speciality == Speciality) {
+			if (T.ID == ID && clsTeacher::SpecialityToString(T.Speciality) == Speciality) {
 				return T;
 			}
 		}
@@ -79,11 +79,28 @@ public:
 	}
 
 	static clsTeacher GetAddNewTeacherObject(int ID) {
-		return clsTeacher(clsTeacher::enMode::AddNewMode, ID, "", "", "", "", "");
+		return clsTeacher(clsTeacher::enMode::AddNewMode, ID, "", "", "", "", clsTeacher::enSpeciality::spEmpty);
 	}
 
 	static vector <clsTeacher> GetTeachersList() {
 		return clsTeacherData::LoadTeachersDataFromFile();
+	}
+
+	static vector<clsTeacher> GetTeachersBySpeciality(clsTeacher::enSpeciality sp) {
+
+		vector<clsTeacher> vAll = clsTeacherData::LoadTeachersDataFromFile();
+		vector<clsTeacher> vResult;
+
+		for (clsTeacher& T : vAll) {
+
+			if (sp == clsTeacher::enSpeciality::spAll ||
+				T.Speciality == sp)
+			{
+				vResult.push_back(T);
+			}
+		}
+
+		return vResult;
 	}
 
 	enum enSaveResults { svFaildEmptyObject = 0, svSucceeded = 1, svIDTeacherExists = 2 };
