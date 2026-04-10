@@ -26,7 +26,7 @@ private:
 	}
 
 	static void _GoBackToMenuScreen() {
-		cout << "\n\nPress any key to back to Main Menu..." << endl;
+		cout << "\n\nPress any key to back to Teacher Menu..." << endl;
 		system("pause>0");
 		ShowTeacherMenu();
 	}

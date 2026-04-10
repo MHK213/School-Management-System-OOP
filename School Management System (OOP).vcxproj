@@ -126,13 +126,21 @@
     <ClCompile Include="School Management System (OOP).cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="clsAddNewCourseScreen.h" />
     <ClInclude Include="clsAddNewStudentScreen.h" />
     <ClInclude Include="clsAddNewTeacherScreen.h" />
     <ClInclude Include="clsCourse.h" />
+    <ClInclude Include="clsCourseData.h" />
+    <ClInclude Include="clsCourseListByTeacherID.h" />
+    <ClInclude Include="clsCourseMenuScreen.h" />
+    <ClInclude Include="clsCourseService.h" />
+    <ClInclude Include="clsCoursesListScreen.h" />
     <ClInclude Include="clsDate.h" />
+    <ClInclude Include="clsDeleteCourseScreen.h" />
     <ClInclude Include="clsDeleteStudentScreen.h" />
     <ClInclude Include="clsDeleteTeacherScreen.h" />
     <ClInclude Include="clsEnrollment.h" />
+    <ClInclude Include="clsFindCourseScreen.h" />
     <ClInclude Include="clsFindStudentScreen.h" />
     <ClInclude Include="clsFindTeacherScreen.h" />
     <ClInclude Include="clsInputValidate.h" />
@@ -150,6 +158,7 @@
     <ClInclude Include="clsTeacherMenuScreen.h" />
     <ClInclude Include="clsTeacherService.h" />
     <ClInclude Include="clsTeachersListScreen.h" />
+    <ClInclude Include="clsUpdateCourseScreen.h" />
     <ClInclude Include="clsUpdateStudentScreen.h" />
     <ClInclude Include="clsUpdateTeacherScreen.h" />
   </ItemGroup>
