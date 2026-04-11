@@ -34,9 +34,9 @@ public:
 		clsTeacher Teacher = clsTeacherService::Find(IDTeacher);
 
 		if (!Teacher.IsEmpty())
-			cout << "\nClient was Found :-)\n";
+			cout << "\nTeacher was Found :-)\n";
 		else
-			cout << "\nClient was Not Found :-(\n";
+			cout << "\nTeacher was Not Found :-(\n";
 
 		_PrintTeacher(Teacher);
 	}

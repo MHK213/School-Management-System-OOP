@@ -28,6 +28,9 @@
     <Filter Include="Header Files\UI - Screens\Teacher">
       <UniqueIdentifier>{066e6cae-aab8-4f78-b3d6-7e4817e73d87}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\UI - Screens\Course">
+      <UniqueIdentifier>{a422c30c-5b93-4c29-b9a4-5bb02ddcda4e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="School Management System (OOP).cpp">
@@ -68,9 +71,6 @@
     <ClInclude Include="clsStudent.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
-    <ClInclude Include="clsCourseMenuScreen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="clsDate.h">
       <Filter>Header Files\Lib</Filter>
     </ClInclude>
@@ -101,24 +101,6 @@
     <ClInclude Include="clsUpdateStudentScreen.h">
       <Filter>Header Files\UI - Screens\Student</Filter>
     </ClInclude>
-    <ClInclude Include="clsCoursesListScreen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="clsAddNewCourseScreen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="clsDeleteCourseScreen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="clsUpdateCourseScreen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="clsFindCourseScreen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="clsCourseListByTeacherID.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="clsAddNewTeacherScreen.h">
       <Filter>Header Files\UI - Screens\Teacher</Filter>
     </ClInclude>
@@ -139,6 +121,30 @@
     </ClInclude>
     <ClInclude Include="clsUpdateTeacherScreen.h">
       <Filter>Header Files\UI - Screens\Teacher</Filter>
+    </ClInclude>
+    <ClInclude Include="clsAddNewCourseScreen.h">
+      <Filter>Header Files\UI - Screens\Course</Filter>
+    </ClInclude>
+    <ClInclude Include="clsCourseListByTeacherID.h">
+      <Filter>Header Files\UI - Screens\Course</Filter>
+    </ClInclude>
+    <ClInclude Include="clsCourseMenuScreen.h">
+      <Filter>Header Files\UI - Screens\Course</Filter>
+    </ClInclude>
+    <ClInclude Include="clsCoursesListScreen.h">
+      <Filter>Header Files\UI - Screens\Course</Filter>
+    </ClInclude>
+    <ClInclude Include="clsDeleteCourseScreen.h">
+      <Filter>Header Files\UI - Screens\Course</Filter>
+    </ClInclude>
+    <ClInclude Include="clsFindCourseScreen.h">
+      <Filter>Header Files\UI - Screens\Course</Filter>
+    </ClInclude>
+    <ClInclude Include="clsUpdateCourseScreen.h">
+      <Filter>Header Files\UI - Screens\Course</Filter>
+    </ClInclude>
+    <ClInclude Include="clsTeacherCoursesScreen.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

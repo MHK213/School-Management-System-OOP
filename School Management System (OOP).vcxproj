@@ -154,6 +154,7 @@
     <ClInclude Include="clsStudentService.h" />
     <ClInclude Include="clsStudentsListScreen.h" />
     <ClInclude Include="clsTeacher.h" />
+    <ClInclude Include="clsTeacherCoursesScreen.h" />
     <ClInclude Include="clsTeacherData.h" />
     <ClInclude Include="clsTeacherMenuScreen.h" />
     <ClInclude Include="clsTeacherService.h" />
