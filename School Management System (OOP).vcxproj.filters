@@ -31,6 +31,12 @@
     <Filter Include="Header Files\UI - Screens\Course">
       <UniqueIdentifier>{a422c30c-5b93-4c29-b9a4-5bb02ddcda4e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Data">
+      <UniqueIdentifier>{1b5acf17-cf37-4332-809b-700970d0f6ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Logic %28Service%29">
+      <UniqueIdentifier>{498076de-e5ad-4320-86e0-9ea0ae6e295e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="School Management System (OOP).cpp">
@@ -38,24 +44,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="clsStudentData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="clsStudentService.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="clsTeacherData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="clsTeacherService.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="clsCourseData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="clsCourseService.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="clsCourse.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
@@ -143,7 +131,31 @@
     <ClInclude Include="clsUpdateCourseScreen.h">
       <Filter>Header Files\UI - Screens\Course</Filter>
     </ClInclude>
+    <ClInclude Include="clsCourseData.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="clsStudentData.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="clsTeacherData.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
     <ClInclude Include="clsTeacherCoursesScreen.h">
+      <Filter>Header Files\UI - Screens\Teacher</Filter>
+    </ClInclude>
+    <ClInclude Include="clsEnrollmentData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsCourseService.h">
+      <Filter>Header Files\Logic %28Service%29</Filter>
+    </ClInclude>
+    <ClInclude Include="clsStudentService.h">
+      <Filter>Header Files\Logic %28Service%29</Filter>
+    </ClInclude>
+    <ClInclude Include="clsTeacherService.h">
+      <Filter>Header Files\Logic %28Service%29</Filter>
+    </ClInclude>
+    <ClInclude Include="clsEnrollmentService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

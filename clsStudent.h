@@ -38,7 +38,6 @@ public:
 	bool IsEmpty() { return (_Mode == enMode::EmptyMode); }
 
 	int GetID() { return _ID; }
-
 	__declspec(property(get = GetID)) int ID;
 	
 	void SetAge(int age) { _Age = age; }

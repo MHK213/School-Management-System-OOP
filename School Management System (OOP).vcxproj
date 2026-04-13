@@ -140,6 +140,8 @@
     <ClInclude Include="clsDeleteStudentScreen.h" />
     <ClInclude Include="clsDeleteTeacherScreen.h" />
     <ClInclude Include="clsEnrollment.h" />
+    <ClInclude Include="clsEnrollmentData.h" />
+    <ClInclude Include="clsEnrollmentService.h" />
     <ClInclude Include="clsFindCourseScreen.h" />
     <ClInclude Include="clsFindStudentScreen.h" />
     <ClInclude Include="clsFindTeacherScreen.h" />
