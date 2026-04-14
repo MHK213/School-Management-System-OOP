@@ -69,7 +69,13 @@ public:
 		return _GetEmptyEnrollmentObject();
 	}
 
-	static bool IsStudentEnrolled(int CourseID, int StudentID) {
+	static bool IsEnrollmentIDExist(int EnrollmentID) {
+		clsEnrollment Enrollment = clsEnrollmentService::Find(EnrollmentID);
+
+		return (!Enrollment.IsEmpty());
+	}
+
+	static bool IsStudentEnrolled(int StudentID, int CourseID) {
 		clsEnrollment Enrollment = clsEnrollmentService::Find(CourseID, StudentID);
 
 		return (!Enrollment.IsEmpty());
@@ -80,19 +86,25 @@ public:
 
 		for (clsEnrollment& E : vEnrollments) {
 			if (E.EnrollmentID == Enrollment.EnrollmentID) {
-				E.MarkForDelete = true;
+				if (E.Status == clsEnrollment::enStatus::Dropped) return false;
+
+				E.Status = clsEnrollment::enStatus::Dropped;
+				E.Grade = "NULL";
 				break;
 			}
 		}
 
 		clsEnrollmentData::SaveEnrollmentsDataToFile(vEnrollments);
-		Enrollment = _GetEmptyEnrollmentObject();
+
+		Enrollment.Status = clsEnrollment::enStatus::Dropped;
+		Enrollment.Grade = "NULL";
 
 		return true;
 	}
 
-	static clsEnrollment GetAddNewEnrollmentObject(int EnrollmentID) {
-		return clsEnrollment(clsEnrollment::enMode::AddNewMode, EnrollmentID, 0, 0, "", "", clsEnrollment::enStatus::EmptyS);
+	static clsEnrollment GetAddNewEnrollmentObject(int EnrollmentID, int StudentID, int CourseID) {
+		return clsEnrollment(clsEnrollment::enMode::AddNewMode, EnrollmentID, StudentID, CourseID, "", "", 
+			clsEnrollment::enStatus::EmptyS);
 	}
 
 	static vector<clsEnrollment> GetEnrollmentsByStudent(int StudentID) {
@@ -137,7 +149,7 @@ public:
 		return (Course.MaxStudents <= _NumberOfStudentInCourse(CourseID));
 	}
 
-	enum enSaveResults { svFaildEmptyObject = 0, svSucceeded = 1, svIDStudentExists = 2 };
+	enum enSaveResults { svFaildEmptyObject = 0, svSucceeded = 1, svStudentAlreadyEnrolled = 2, svCourseFull = 3 };
 
 	static enSaveResults Save(clsEnrollment Enrollment) {
 		switch (Enrollment.Mode) {
@@ -149,8 +161,10 @@ public:
 			return enSaveResults::svSucceeded;
 		}
 		case clsEnrollment::enMode::AddNewMode: {
-			if (clsEnrollmentService::IsStudentEnrolled(Enrollment.CourseID, Enrollment.StudentID))
-				return enSaveResults::svIDStudentExists;
+			if (clsEnrollmentService::IsStudentEnrolled(Enrollment.StudentID, Enrollment.CourseID))
+				return enSaveResults::svStudentAlreadyEnrolled;
+			else if (clsEnrollmentService::IsCourseFull(Enrollment.CourseID))
+				return enSaveResults::svCourseFull;
 			else {
 				_EnrollStudent(Enrollment);
 				Enrollment.Mode = clsEnrollment::enMode::UpdateMode;

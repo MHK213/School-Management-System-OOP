@@ -139,9 +139,12 @@
     <ClInclude Include="clsDeleteCourseScreen.h" />
     <ClInclude Include="clsDeleteStudentScreen.h" />
     <ClInclude Include="clsDeleteTeacherScreen.h" />
+    <ClInclude Include="clsDropEnrollmentScreen.h" />
     <ClInclude Include="clsEnrollment.h" />
     <ClInclude Include="clsEnrollmentData.h" />
+    <ClInclude Include="clsEnrollmentMenuScreen.h" />
     <ClInclude Include="clsEnrollmentService.h" />
+    <ClInclude Include="clsEnrollStudentScreen.h" />
     <ClInclude Include="clsFindCourseScreen.h" />
     <ClInclude Include="clsFindStudentScreen.h" />
     <ClInclude Include="clsFindTeacherScreen.h" />
@@ -162,6 +165,7 @@
     <ClInclude Include="clsTeacherService.h" />
     <ClInclude Include="clsTeachersListScreen.h" />
     <ClInclude Include="clsUpdateCourseScreen.h" />
+    <ClInclude Include="clsUpdateEnrollmentScreen.h" />
     <ClInclude Include="clsUpdateStudentScreen.h" />
     <ClInclude Include="clsUpdateTeacherScreen.h" />
   </ItemGroup>

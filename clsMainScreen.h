@@ -11,6 +11,7 @@
 #include "clsFindStudentScreen.h"
 #include "clsTeacherMenuScreen.h"
 #include "clsCourseMenuScreen.h"
+#include "clsEnrollmentMenuScreen.h"
 
 using namespace std;
 
@@ -63,6 +64,10 @@ private:
 		clsCourseMenuScreen::ShowCourseMenu();
 	}
 
+	static void _ShowEnrollmentMenuScreen() {
+		clsEnrollmentMenuScreen::ShowEnrollmentMenu();
+	}
+
 	static void _PerformMainMenuOption(enMainMenuOption MainMenuOption) {
 		switch (MainMenuOption) {
 		case enShowStudentsList: {
@@ -109,7 +114,7 @@ private:
 		}
 		case enManageEnrollments: {
 			system("cls");
-			cout << "Manage Enrollments Screen will be here\n";
+			_ShowEnrollmentMenuScreen();
 			_GoBackToMainMenu();
 			break;
 		}

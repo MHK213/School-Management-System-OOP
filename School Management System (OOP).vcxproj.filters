@@ -37,6 +37,9 @@
     <Filter Include="Header Files\Logic %28Service%29">
       <UniqueIdentifier>{498076de-e5ad-4320-86e0-9ea0ae6e295e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\UI - Screens\Enrollment">
+      <UniqueIdentifier>{e01edb37-d7f8-41bf-944c-15dae67e08b3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="School Management System (OOP).cpp">
@@ -143,9 +146,6 @@
     <ClInclude Include="clsTeacherCoursesScreen.h">
       <Filter>Header Files\UI - Screens\Teacher</Filter>
     </ClInclude>
-    <ClInclude Include="clsEnrollmentData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="clsCourseService.h">
       <Filter>Header Files\Logic %28Service%29</Filter>
     </ClInclude>
@@ -155,7 +155,22 @@
     <ClInclude Include="clsTeacherService.h">
       <Filter>Header Files\Logic %28Service%29</Filter>
     </ClInclude>
+    <ClInclude Include="clsEnrollmentData.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
     <ClInclude Include="clsEnrollmentService.h">
+      <Filter>Header Files\Logic %28Service%29</Filter>
+    </ClInclude>
+    <ClInclude Include="clsEnrollStudentScreen.h">
+      <Filter>Header Files\UI - Screens\Enrollment</Filter>
+    </ClInclude>
+    <ClInclude Include="clsEnrollmentMenuScreen.h">
+      <Filter>Header Files\UI - Screens\Enrollment</Filter>
+    </ClInclude>
+    <ClInclude Include="clsDropEnrollmentScreen.h">
+      <Filter>Header Files\UI - Screens\Enrollment</Filter>
+    </ClInclude>
+    <ClInclude Include="clsUpdateEnrollmentScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
