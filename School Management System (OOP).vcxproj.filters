@@ -180,10 +180,13 @@
       <Filter>Header Files\UI - Screens\Enrollment</Filter>
     </ClInclude>
     <ClInclude Include="clsAssignGradeScreen.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\UI - Screens\Enrollment</Filter>
     </ClInclude>
     <ClInclude Include="clsEnrollmentsListScreen.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\UI - Screens\Enrollment</Filter>
+    </ClInclude>
+    <ClInclude Include="clsReportScreen.h">
+      <Filter>Header Files\UI - Screens</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

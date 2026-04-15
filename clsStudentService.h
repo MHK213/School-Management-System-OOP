@@ -4,6 +4,8 @@
 #include "clsStudent.h"
 #include "clsStudentData.h"
 #include "clsString.h"
+#include "clsEnrollmentService.h"
+#include "clsEnrollment.h"
 
 using namespace std;
 
@@ -86,6 +88,34 @@ public:
 
 	static vector <clsStudent> GetStudentsList() {
 		return clsStudentData::LoadStudentsDataFromFile();
+	}
+
+	static pair<clsStudent, int> GetMostActiveStudentWithCount() {
+
+		vector<clsEnrollment> vEnrollments =
+			clsEnrollmentService::GetAllEnrollments();
+
+		map<int, int> StudentCount;
+
+		for (clsEnrollment& E : vEnrollments) {
+			if (E.Status == clsEnrollment::Active || E.Status == clsEnrollment::Completed)
+				StudentCount[E.StudentID]++;
+		}
+
+		int MaxStudentID = -1;
+		int MaxCount = 0;
+
+		for (auto& pair : StudentCount) {
+			if (pair.second > MaxCount) {
+				MaxCount = pair.second;
+				MaxStudentID = pair.first;
+			}
+		}
+
+		if (MaxStudentID == -1)
+			return { _GetEmptyStudentObject(), 0 };
+
+		return { clsStudentService::Find(MaxStudentID), MaxCount };
 	}
 
 	enum enSaveResults { svFaildEmptyObject = 0, svSucceeded = 1, svIDStudentExists = 2 };

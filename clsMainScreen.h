@@ -12,6 +12,7 @@
 #include "clsTeacherMenuScreen.h"
 #include "clsCourseMenuScreen.h"
 #include "clsEnrollmentMenuScreen.h"
+#include "clsReportScreen.h"
 
 using namespace std;
 
@@ -68,6 +69,10 @@ private:
 		clsEnrollmentMenuScreen::ShowEnrollmentMenu();
 	}
 
+	static void _ShowReportScreen() {
+		clsReportScreen::ShowReportScreen();
+	}
+
 	static void _PerformMainMenuOption(enMainMenuOption MainMenuOption) {
 		switch (MainMenuOption) {
 		case enShowStudentsList: {
@@ -120,7 +125,7 @@ private:
 		}
 		case enReports: {
 			system("cls");
-			cout << "Reports will be here\n";
+			_ShowReportScreen();
 			_GoBackToMainMenu();
 			break;
 		}

@@ -5,6 +5,7 @@
 #include "clsEnrollmentData.h"
 #include "clsCourse.h"
 #include "clsCourseService.h"
+#include <map>
 
 using namespace std;
 
@@ -13,6 +14,10 @@ class clsEnrollmentService
 private:
 	static clsEnrollment _GetEmptyEnrollmentObject() {
 		return clsEnrollment(clsEnrollment::enMode::EmptyMode, 0, 0, 0, "", "", clsEnrollment::enStatus::EmptyS);
+	}
+
+	static clsCourse _GetEmptyCourseObject() {
+		return clsCourse(clsCourse::enMode::EmptyMode, 0, "", 0, 0, 0);
 	}
 
 	static void _EnrollStudent(clsEnrollment Enrollment) {
@@ -155,6 +160,51 @@ public:
 		return vResult;
 	}
 
+	static int NumberOfActiveEnrollments() {
+		vector<clsEnrollment> vAll = clsEnrollmentData::LoadEnrollmentsDataFromFile();
+		int Count = 0;
+
+		for (clsEnrollment& E : vAll) {
+
+			if (E.Status == clsEnrollment::enStatus::Active)
+			{
+				Count++;
+			}
+		}
+
+		return Count;
+	}
+
+	static int NumberOfCompletedEnrollments() {
+		vector<clsEnrollment> vAll = clsEnrollmentData::LoadEnrollmentsDataFromFile();
+		int Count = 0;
+
+		for (clsEnrollment& E : vAll) {
+
+			if (E.Status == clsEnrollment::enStatus::Completed)
+			{
+				Count++;
+			}
+		}
+
+		return Count;
+	}
+
+	static int NumberOfDroppedEnrollments() {
+		vector<clsEnrollment> vAll = clsEnrollmentData::LoadEnrollmentsDataFromFile();
+		int Count = 0;
+
+		for (clsEnrollment& E : vAll) {
+
+			if (E.Status == clsEnrollment::enStatus::Dropped)
+			{
+				Count++;
+			}
+		}
+
+		return Count;
+	}
+
 	static clsEnrollment FindCompletedEnrollmentByID(int EnrollmentID) {
 		vector<clsEnrollment> vCompletedEnrollments = clsEnrollmentService::GetCompletedEnrollments();
 
@@ -175,6 +225,55 @@ public:
 		clsCourse Course = clsCourseService::Find(CourseID);
 
 		return (Course.MaxStudents <= _NumberOfStudentInCourse(CourseID));
+	}
+
+	static pair<clsCourse, int> GetMostPopularCourseWithCount() {
+
+		vector<clsEnrollment> vEnrollments = clsEnrollmentService::GetAllEnrollments();
+
+		map<int, int> CourseCount;
+
+		for (clsEnrollment& E : vEnrollments) {
+			if (E.Status == clsEnrollment::Active || E.Status == clsEnrollment::Completed)
+				CourseCount[E.CourseID]++;
+		}
+
+		int MaxCourseID = -1;
+		int MaxCount = 0;
+
+		for (auto& pair : CourseCount) {
+			if (pair.second > MaxCount) {
+				MaxCount = pair.second;
+				MaxCourseID = pair.first;
+			}
+		}
+
+		if (MaxCourseID == -1)
+			return { _GetEmptyCourseObject(), 0 };
+
+		return { clsCourseService::Find(MaxCourseID), MaxCount };
+	}
+
+	static int GetNumberOfFullCourses() {
+
+		vector<clsCourse> vCourses = clsCourseData::LoadCoursesDataFromFile();
+		vector<clsEnrollment> vEnrollments = clsEnrollmentService::GetAllEnrollments();
+
+		map<int, int> CourseCount;
+
+		for (clsEnrollment& E : vEnrollments) {
+			if (E.Status == clsEnrollment::Active || E.Status == clsEnrollment::Completed)
+				CourseCount[E.CourseID]++;
+		}
+
+		int FullCourses = 0;
+
+		for (clsCourse& C : vCourses) {
+			if (CourseCount[C.CourseID] >= C.MaxStudents)
+				FullCourses++;
+		}
+
+		return FullCourses;
 	}
 
 	enum enSaveResults { svFaildEmptyObject = 0, svSucceeded = 1, svStudentAlreadyEnrolled = 2, svCourseFull = 3 };

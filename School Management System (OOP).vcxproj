@@ -154,6 +154,7 @@
     <ClInclude Include="clsInputValidate.h" />
     <ClInclude Include="clsMainScreen.h" />
     <ClInclude Include="clsPerson.h" />
+    <ClInclude Include="clsReportScreen.h" />
     <ClInclude Include="clsScreen.h" />
     <ClInclude Include="clsShowTeacherListBySpeciality.h" />
     <ClInclude Include="clsString.h" />
