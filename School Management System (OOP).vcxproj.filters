@@ -171,6 +171,18 @@
       <Filter>Header Files\UI - Screens\Enrollment</Filter>
     </ClInclude>
     <ClInclude Include="clsUpdateEnrollmentScreen.h">
+      <Filter>Header Files\UI - Screens\Enrollment</Filter>
+    </ClInclude>
+    <ClInclude Include="clsStudentCoursesScreen.h">
+      <Filter>Header Files\UI - Screens\Enrollment</Filter>
+    </ClInclude>
+    <ClInclude Include="clsCourseStudentsScreen.h">
+      <Filter>Header Files\UI - Screens\Enrollment</Filter>
+    </ClInclude>
+    <ClInclude Include="clsAssignGradeScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsEnrollmentsListScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

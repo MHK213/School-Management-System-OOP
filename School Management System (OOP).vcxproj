@@ -129,12 +129,14 @@
     <ClInclude Include="clsAddNewCourseScreen.h" />
     <ClInclude Include="clsAddNewStudentScreen.h" />
     <ClInclude Include="clsAddNewTeacherScreen.h" />
+    <ClInclude Include="clsAssignGradeScreen.h" />
     <ClInclude Include="clsCourse.h" />
     <ClInclude Include="clsCourseData.h" />
     <ClInclude Include="clsCourseListByTeacherID.h" />
     <ClInclude Include="clsCourseMenuScreen.h" />
     <ClInclude Include="clsCourseService.h" />
     <ClInclude Include="clsCoursesListScreen.h" />
+    <ClInclude Include="clsCourseStudentsScreen.h" />
     <ClInclude Include="clsDate.h" />
     <ClInclude Include="clsDeleteCourseScreen.h" />
     <ClInclude Include="clsDeleteStudentScreen.h" />
@@ -144,6 +146,7 @@
     <ClInclude Include="clsEnrollmentData.h" />
     <ClInclude Include="clsEnrollmentMenuScreen.h" />
     <ClInclude Include="clsEnrollmentService.h" />
+    <ClInclude Include="clsEnrollmentsListScreen.h" />
     <ClInclude Include="clsEnrollStudentScreen.h" />
     <ClInclude Include="clsFindCourseScreen.h" />
     <ClInclude Include="clsFindStudentScreen.h" />
@@ -155,6 +158,7 @@
     <ClInclude Include="clsShowTeacherListBySpeciality.h" />
     <ClInclude Include="clsString.h" />
     <ClInclude Include="clsStudent.h" />
+    <ClInclude Include="clsStudentCoursesScreen.h" />
     <ClInclude Include="clsStudentData.h" />
     <ClInclude Include="clsStudentService.h" />
     <ClInclude Include="clsStudentsListScreen.h" />

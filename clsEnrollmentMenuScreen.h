@@ -6,6 +6,10 @@
 #include "clsEnrollStudentScreen.h"
 #include "clsDropEnrollmentScreen.h"
 #include "clsUpdateEnrollmentScreen.h"
+#include "clsStudentCoursesScreen.h"
+#include "clsCourseStudentsScreen.h"
+#include "clsAssignGradeScreen.h"
+#include "clsEnrollmentsListScreen.h"
 
 using namespace std;
 
@@ -13,13 +17,13 @@ class clsEnrollmentMenuScreen : protected clsScreen
 {
 private:
 	enum enEnrollmentMenuOption {
-		enEnrollStudent = 1, enDropEnrollment = 2, enUpdateEnrollment = 3, enStudentCourses = 4,
-		enCourseStudents = 5, enAssignGrade = 6, enBack = 7
+		enEnrollmentsList = 1, enEnrollStudent = 2, enDropEnrollment = 3, enUpdateEnrollment = 4, enStudentCourses = 5,
+		enCourseStudents = 6, enAssignGrade = 7, enBack = 8
 	};
 
 	static enEnrollmentMenuOption _ReadEnrollmentMenuOption() {
-		cout << setw(37) << left << "" << "Choose what do you want to do ? [1 to 7] ? ";
-		short EnrollmentMenuChoice = clsInputValidate::ReadShortNumberBetween(1, 7, "Enter a Number between 1 and 7? ");
+		cout << setw(37) << left << "" << "Choose what do you want to do ? [1 to 8] ? ";
+		short EnrollmentMenuChoice = clsInputValidate::ReadShortNumberBetween(1, 8, "Enter a Number between 1 and 8? ");
 
 		return enEnrollmentMenuOption(EnrollmentMenuChoice);
 	}
@@ -42,8 +46,30 @@ private:
 		clsUpdateEnrollmentScreen::ShowUpdateEnrollmentScreen();
 	}
 
+	static void _ShowStudentCoursesScreen() {
+		clsStudentCoursesScreen::ShowStudentCoursesScreen();
+	}
+
+	static void _ShowCourseStudentsScreen() {
+		clsCourseStudentsScreen::ShowCourseStudentsScreen();
+	}
+
+	static void _ShowAssignGradeScreen() {
+		clsAssignGradeScreen::ShowAssignGradeScreen();
+	}
+
+	static void _ShowAllEnrollmentsList() {
+		clsEnrollmentsListScreen::ShowEnrollmentsListScreen();
+	}
+
 	static void _PerformEnrollmentMenuOption(enEnrollmentMenuOption EnrollmentMenuOption) {
 		switch (EnrollmentMenuOption) {
+		case enEnrollmentsList: {
+			system("cls");
+			_ShowAllEnrollmentsList();
+			_GoBackToMenuScreen();
+			break;
+		}
 		case enEnrollStudent: {
 			system("cls");
 			_ShowEnrollStudentScreen();
@@ -64,19 +90,19 @@ private:
 		}
 		case enStudentCourses: {
 			system("cls");
-
+			_ShowStudentCoursesScreen();
 			_GoBackToMenuScreen();
 			break;
 		}
 		case enCourseStudents: {
 			system("cls");
-
+			_ShowCourseStudentsScreen();
 			_GoBackToMenuScreen();
 			break;
 		}
 		case enAssignGrade: {
 			system("cls");
-
+			_ShowAssignGradeScreen();
 			_GoBackToMenuScreen();
 			break;
 		}
@@ -92,13 +118,14 @@ public:
 		cout << setw(37) << left << "" << "===========================================\n";
 		cout << setw(37) << left << "" << "\t\tEnrollment Menu Screen\n";
 		cout << setw(37) << left << "" << "===========================================\n";
-		cout << setw(37) << left << "" << "\t[1] Enroll Student.\n";
-		cout << setw(37) << left << "" << "\t[2] Drop Enrollment.\n";
-		cout << setw(37) << left << "" << "\t[3] Update Enrollment.\n";
-		cout << setw(37) << left << "" << "\t[4] Student Courses.\n";
-		cout << setw(37) << left << "" << "\t[5] Course Students.\n";
-		cout << setw(37) << left << "" << "\t[6] Assign Grade.\n";
-		cout << setw(37) << left << "" << "\t[7] Back To Main Menu.\n";
+		cout << setw(37) << left << "" << "\t[1] Enrollments List.\n";
+		cout << setw(37) << left << "" << "\t[2] Enroll Student.\n";
+		cout << setw(37) << left << "" << "\t[3] Drop Enrollment.\n";
+		cout << setw(37) << left << "" << "\t[4] Update Enrollment.\n";
+		cout << setw(37) << left << "" << "\t[5] Student Courses.\n";
+		cout << setw(37) << left << "" << "\t[6] Course Students.\n";
+		cout << setw(37) << left << "" << "\t[7] Assign Grade.\n";
+		cout << setw(37) << left << "" << "\t[8] Back To Main Menu.\n";
 		cout << setw(37) << left << "" << "===========================================" << endl;
 
 		_PerformEnrollmentMenuOption(_ReadEnrollmentMenuOption());

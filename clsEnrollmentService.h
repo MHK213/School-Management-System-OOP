@@ -139,6 +139,34 @@ public:
 		return vResult;
 	}
 
+	static vector<clsEnrollment> GetCompletedEnrollments() {
+
+		vector<clsEnrollment> vAll = clsEnrollmentData::LoadEnrollmentsDataFromFile();
+		vector<clsEnrollment> vResult;
+
+		for (clsEnrollment& E : vAll) {
+
+			if (E.Status == clsEnrollment::enStatus::Completed && E.Grade == "NULL")
+			{
+				vResult.push_back(E);
+			}
+		}
+
+		return vResult;
+	}
+
+	static clsEnrollment FindCompletedEnrollmentByID(int EnrollmentID) {
+		vector<clsEnrollment> vCompletedEnrollments = clsEnrollmentService::GetCompletedEnrollments();
+
+		for (clsEnrollment& E : vCompletedEnrollments) {
+			if (E.EnrollmentID == EnrollmentID) {
+				return E;
+			}
+		}
+
+		return _GetEmptyEnrollmentObject();
+	}
+
 	static vector <clsEnrollment> GetAllEnrollments() {
 		return clsEnrollmentData::LoadEnrollmentsDataFromFile();
 	}
