@@ -13,6 +13,7 @@
 #include "clsCourseMenuScreen.h"
 #include "clsEnrollmentMenuScreen.h"
 #include "clsReportScreen.h"
+#include "clsManageUserScreen.h"
 
 using namespace std;
 
@@ -73,6 +74,10 @@ private:
 		clsReportScreen::ShowReportScreen();
 	}
 
+	static void _ShowManageUserScreen() {
+		clsManageUserScreen::ShowManageUsersMenu();
+	}
+
 	static void _PerformMainMenuOption(enMainMenuOption MainMenuOption) {
 		switch (MainMenuOption) {
 		case enShowStudentsList: {
@@ -131,7 +136,7 @@ private:
 		}
 		case enManageUsers: {
 			system("cls");
-			cout << "Manage Users Screen will be here\n";
+			_ShowManageUserScreen();
 			_GoBackToMainMenu();
 			break;
 		}

@@ -40,6 +40,9 @@
     <Filter Include="Header Files\UI - Screens\Enrollment">
       <UniqueIdentifier>{e01edb37-d7f8-41bf-944c-15dae67e08b3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\UI - Screens\User">
+      <UniqueIdentifier>{48ce6d96-9dcd-464f-9e37-8fec743ebbf4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="School Management System (OOP).cpp">
@@ -187,6 +190,33 @@
     </ClInclude>
     <ClInclude Include="clsReportScreen.h">
       <Filter>Header Files\UI - Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="clsUser.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="clsUserData.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="clsUserService.h">
+      <Filter>Header Files\Logic %28Service%29</Filter>
+    </ClInclude>
+    <ClInclude Include="clsManageUserScreen.h">
+      <Filter>Header Files\UI - Screens\User</Filter>
+    </ClInclude>
+    <ClInclude Include="clsListUsersScreen.h">
+      <Filter>Header Files\UI - Screens\User</Filter>
+    </ClInclude>
+    <ClInclude Include="clsAddNewUserScreen.h">
+      <Filter>Header Files\UI - Screens\User</Filter>
+    </ClInclude>
+    <ClInclude Include="clsDeleteUserScreen.h">
+      <Filter>Header Files\UI - Screens\User</Filter>
+    </ClInclude>
+    <ClInclude Include="clsUpdateUserScreen.h">
+      <Filter>Header Files\UI - Screens\User</Filter>
+    </ClInclude>
+    <ClInclude Include="clsFindUserScreen.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
