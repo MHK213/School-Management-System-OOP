@@ -14,6 +14,7 @@
 #include "clsEnrollmentMenuScreen.h"
 #include "clsReportScreen.h"
 #include "clsManageUserScreen.h"
+#include "Global.h"
 
 using namespace std;
 
@@ -76,6 +77,10 @@ private:
 
 	static void _ShowManageUserScreen() {
 		clsManageUserScreen::ShowManageUsersMenu();
+	}
+
+	static void _Logout() {
+		CurrentUser = clsUserService::FindUser("", "");
 	}
 
 	static void _PerformMainMenuOption(enMainMenuOption MainMenuOption) {
@@ -142,8 +147,7 @@ private:
 		}
 		case enLogout: {
 			system("cls");
-			cout << "Logout Screen will be here\n";
-			_GoBackToMainMenu();
+			_Logout();
 			break;
 		}
 		default: {

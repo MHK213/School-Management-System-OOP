@@ -92,6 +92,9 @@ private:
 
 public:
 	static void ShowManageUsersMenu() {
+		if (!CheckAccessRights(clsUser::enPermissions::pManageUsers)) {
+			return;
+		}
 
 		system("cls");
 

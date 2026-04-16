@@ -24,6 +24,10 @@ private:
 	}
 public:
 	static void ShowStudentsList() {
+		if (!CheckAccessRights(clsUser::enPermissions::pListStudents)) {
+			return;
+		}
+
 		vector <clsStudent> vStudents = clsStudentService::GetStudentsList();
 
 		string Title = "\t\t  Student List Screen";

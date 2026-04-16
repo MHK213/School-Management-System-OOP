@@ -112,6 +112,10 @@ private:
 
 public:
 	static void ShowEnrollmentMenu() {
+		if (!CheckAccessRights(clsUser::enPermissions::pManageEnrollments)) {
+			return;
+		}
+
 		system("cls");
 		_DrawScreenHeader("\t\tEnrollment Screen");
 

@@ -32,6 +32,10 @@ private:
 
 public:
 	static void ShowReportScreen() {
+		if (!CheckAccessRights(clsUser::enPermissions::pViewReports)) {
+			return;
+		}
+
 		_DrawScreenHeader("\t\t  System Report Screen");
 
 		cout << "\n\n-------------- System Report --------------";

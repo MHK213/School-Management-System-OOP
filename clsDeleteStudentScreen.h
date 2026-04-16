@@ -28,6 +28,10 @@ private:
 	}
 public:
 	static void ShowDeleteStudentScreen() {
+		if (!CheckAccessRights(clsUser::enPermissions::pDeleteStudent)) {
+			return;
+		}
+
 		_DrawScreenHeader("\t\t  Delete Student Screen");
 
 		int IDStudent = clsInputValidate::ReadIntNumber("Please Enter Student ID : ");

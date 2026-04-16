@@ -109,6 +109,10 @@ private:
 	}
 public:
 	static void ShowTeacherMenu() {
+		if (!CheckAccessRights(clsUser::enPermissions::pManageTeachers)) {
+			return;
+		}
+
 		system("cls");
 		_DrawScreenHeader("\t\tTeacher Menu Screen");
 

@@ -104,4 +104,15 @@ public:
 			return enSaveResults::svFaildEmptyObject;
 		}
 	}
+
+	static bool CheckAccessPermission(clsUser User, clsUser::enPermissions Permission) {
+
+		if (User.clsUser::Permissions == clsUser::enPermissions::eAll)
+			return true;
+
+		if ((Permission & User.clsUser::Permissions) == Permission)
+			return true;
+		else
+			return false;
+	}
 };

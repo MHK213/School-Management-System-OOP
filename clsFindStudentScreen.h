@@ -29,6 +29,9 @@ private:
 
 public:
 	static void ShowFindStudentScreen() {
+		if (!CheckAccessRights(clsUser::enPermissions::pFindStudent)) {
+			return;
+		}
 
 		_DrawScreenHeader("\t\t  Find Student Screen");
 

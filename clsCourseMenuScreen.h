@@ -102,6 +102,9 @@ private:
 
 public:
 	static void ShowCourseMenu() {
+		if (!CheckAccessRights(clsUser::enPermissions::pManageCourses)) {
+			return;
+		}
 
 		system("cls");
 

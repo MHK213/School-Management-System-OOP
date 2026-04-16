@@ -54,6 +54,10 @@ private:
 	}
 public:
 	static void ShowAddNewStudentScreen() {
+		if (!CheckAccessRights(clsUser::enPermissions::pAddStudent)) {
+			return;
+		}
+
 		_DrawScreenHeader("\t\t  Add new Student Screen");
 
 		int IDStudent = clsInputValidate::ReadIntNumber("Please Enter Student ID : ");
