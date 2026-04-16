@@ -12,6 +12,7 @@ class clsUpdateUserScreen : protected clsScreen
 {
 private:
 	static int _ReadPermissions() {
+
 		char Answer = 'n';
 		int Permissions = 0;
 
@@ -21,49 +22,61 @@ private:
 		} while (toupper(Answer) != 'Y' && toupper(Answer) != 'N');
 
 		if (toupper(Answer) == 'Y')
-			return -1;
+			return clsUser::eAll;
 
-		cout << "\nDo you want to give to? \n";
+		cout << "\nSelect Permissions:\n";
 
-		cout << "\nShow Client List? y/n? ";
+		// Students
+		cout << "\nAccess Students List? y/n? ";
 		cin >> Answer;
 		if (toupper(Answer) == 'Y')
-			Permissions += clsUser::enPermissions::pListClients;
+			Permissions |= clsUser::pListStudents;
 
-		cout << "\nAdd New Client? y/n? ";
+		cout << "\nAdd Student? y/n? ";
 		cin >> Answer;
 		if (toupper(Answer) == 'Y')
-			Permissions += clsUser::enPermissions::pAddNewClients;
+			Permissions |= clsUser::pAddStudent;
 
-		cout << "\nDelete Client? y/n? ";
+		cout << "\nDelete Student? y/n? ";
 		cin >> Answer;
 		if (toupper(Answer) == 'Y')
-			Permissions += clsUser::enPermissions::pDeleteClient;
+			Permissions |= clsUser::pDeleteStudent;
 
-		cout << "\nUpdate Client? y/n? ";
+		cout << "\nUpdate Student? y/n? ";
 		cin >> Answer;
 		if (toupper(Answer) == 'Y')
-			Permissions += clsUser::enPermissions::pUpdateClient;
+			Permissions |= clsUser::pUpdateStudent;
 
-		cout << "\nFind Client? y/n? ";
+		cout << "\nFind Student? y/n? ";
 		cin >> Answer;
 		if (toupper(Answer) == 'Y')
-			Permissions += clsUser::enPermissions::pFindClient;
+			Permissions |= clsUser::pFindStudent;
 
-		cout << "\nTransactions? y/n? ";
+		// Modules
+		cout << "\nManage Teachers? y/n? ";
 		cin >> Answer;
 		if (toupper(Answer) == 'Y')
-			Permissions += clsUser::enPermissions::pTransactions;
+			Permissions |= clsUser::pManageTeachers;
 
-		cout << "\nmanage Users? y/n? ";
+		cout << "\nManage Courses? y/n? ";
 		cin >> Answer;
 		if (toupper(Answer) == 'Y')
-			Permissions += clsUser::enPermissions::pManageUsers;
+			Permissions |= clsUser::pManageCourses;
 
-		cout << "\nLogin Register List? y/n? ";
+		cout << "\nManage Enrollments? y/n? ";
 		cin >> Answer;
 		if (toupper(Answer) == 'Y')
-			Permissions += clsUser::enPermissions::pLoginRegister;
+			Permissions |= clsUser::pManageEnrollments;
+
+		cout << "\nView Reports? y/n? ";
+		cin >> Answer;
+		if (toupper(Answer) == 'Y')
+			Permissions |= clsUser::pViewReports;
+
+		cout << "\nManage Users? y/n? ";
+		cin >> Answer;
+		if (toupper(Answer) == 'Y')
+			Permissions |= clsUser::pManageUsers;
 
 		return Permissions;
 	}
@@ -98,7 +111,7 @@ private:
 		cout << "\nPhone        : " << User.Phone;
 		cout << "\nUserName     : " << User.UserName;
 		cout << "\nPassword     : " << User.Password;
-		cout << "\nPermissions   : " << User.Permissions;
+		cout << "\nPermissions  : " << User.Permissions;
 		cout << "\n________________________________________" << endl;
 	}
 

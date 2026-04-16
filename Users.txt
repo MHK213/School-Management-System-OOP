@@ -2,3 +2,4 @@ School#//#Manager#//#sch@gmail.com#//#33245342#//#Admin#//#3456#//#-1
 School#//#Employee#//#sch2@gmail.com#//#33465362#//#User2#//#2323#//#128
 School#//#Employee2#//#sch2@gmail.com#//#33245342#//#User1#//#6543#//#81
 School#//#Employee#//#sch3@gmail.com#//#33242146#//#User3#//#11111111#//#49
+Mohamed#//#Sherif#//#mohsh@school.dz#//#01414191414#//#TeacherUser#//#1234#//#209

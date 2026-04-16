@@ -37,46 +37,24 @@ public:
 	}
 
 	static clsUser FindUser(string UserName) {
-		vector <clsUser> vUsers;
+		vector <clsUser> vUsers = clsUserData::LoadUsersDataFromFile();;
 
-		fstream MyFile;
-		MyFile.open("Users.txt", ios::in);
-
-		if (MyFile.is_open()) {
-			string Line;
-			while (getline(MyFile, Line)) {
-				clsUser User = clsUserData::ConvertLineToUserObject(Line);
-
-				if (User.UserName == UserName) {
-					MyFile.close();
-					return User;
-				}
-				vUsers.push_back(User);
-			}
-			MyFile.close();
+		for(clsUser& U : vUsers)
+		if (U.UserName == UserName) {
+			return U;
 		}
+
 		return _GetEmptyUserObject();
 	}
 
 	static clsUser FindUser(string UserName, string Password) {
-		vector <clsUser> vUsers;
+		vector <clsUser> vUsers = clsUserData::LoadUsersDataFromFile();;
 
-		fstream MyFile;
-		MyFile.open("Users.txt", ios::in);
-
-		if (MyFile.is_open()) {
-			string Line;
-			while (getline(MyFile, Line)) {
-				clsUser User = clsUserData::ConvertLineToUserObject(Line);
-
-				if (User.UserName == UserName && User.Password == Password) {
-					MyFile.close();
-					return User;
-				}
-				vUsers.push_back(User);
+		for (clsUser& U : vUsers)
+			if (U.UserName == UserName && U.Password == Password) {
+				return U;
 			}
-			MyFile.close();
-		}
+
 		return _GetEmptyUserObject();
 	}
 

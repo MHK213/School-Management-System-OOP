@@ -15,8 +15,17 @@ class clsUser : public clsPerson
 public:
 	enum enMode { EmptyMode = 0, UpdateMode = 1, AddNewMode = 2 };
 	enum enPermissions {
-		eAll = -1, pListClients = 1, pAddNewClients = 2, pDeleteClient = 4,
-		pUpdateClient = 8, pFindClient = 16, pTransactions = 32, pManageUsers = 64, pLoginRegister = 128
+		eAll = -1,
+		pListStudents = 1,
+		pAddStudent = 2,
+		pDeleteStudent = 4,
+		pUpdateStudent = 8,
+		pFindStudent = 16,
+		pManageTeachers = 32,
+		pManageCourses = 64,
+		pManageEnrollments = 128,
+		pViewReports = 256,
+		pManageUsers = 512
 	};
 private:
 	enMode _Mode;
