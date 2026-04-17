@@ -25,8 +25,17 @@ public:
 		pManageCourses = 64,
 		pManageEnrollments = 128,
 		pViewReports = 256,
-		pManageUsers = 512
+		pManageUsers = 512,
+		pLoginRegister = 1024
 	};
+
+	struct stLoginRegisterRecord {
+		string DateTime;
+		string UserName;
+		string Password;
+		int Permissions;
+	};
+
 private:
 	enMode _Mode;
 	string _UserName;

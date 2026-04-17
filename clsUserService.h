@@ -3,6 +3,7 @@
 #include <iostream>
 #include "clsUser.h"
 #include "clsUserData.h"
+#include "clsUtil.h"
 
 using namespace std;
 
@@ -48,7 +49,7 @@ public:
 	}
 
 	static clsUser FindUser(string UserName, string Password) {
-		vector <clsUser> vUsers = clsUserData::LoadUsersDataFromFile();;
+		vector <clsUser> vUsers = clsUserData::LoadUsersDataFromFile();
 
 		for (clsUser& U : vUsers)
 			if (U.UserName == UserName && U.Password == Password) {

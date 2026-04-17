@@ -224,5 +224,11 @@
     <ClInclude Include="clsLoginScreen.h">
       <Filter>Header Files\UI - Screens</Filter>
     </ClInclude>
+    <ClInclude Include="clsLoginRegisterScreen.h">
+      <Filter>Header Files\UI - Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="clsUtil.h">
+      <Filter>Header Files\Lib</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -20,6 +20,8 @@ protected:
             cout << "\n\t\t\t\t       " << SubTitle;
         }
         cout << "\n\t\t\t\t      _________________________________________\n\n";
+        cout << "\t\t\t\t      User: " << CurrentUser.UserName << endl;
+        cout << "\t\t\t\t      Date: " << clsDate::DateToString(clsDate()) << endl << endl;
     }
 
     static bool CheckAccessRights(clsUser::enPermissions Permission) {

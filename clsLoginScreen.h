@@ -5,6 +5,7 @@
 #include "clsMainScreen.h"
 #include "Global.h"
 #include "clsUserService.h"
+#include "clsUserData.h"
 
 using namespace std;
 
@@ -42,7 +43,7 @@ private:
 
 		} while (LoginFaild);
 
-		/*CurrentUser.RegisterLogIn();*/
+		clsUserData::RegisterLogIn(CurrentUser);
 		clsMainScreen::ShowMainMenu();
 
 		return true;

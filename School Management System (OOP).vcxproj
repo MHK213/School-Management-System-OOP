@@ -156,6 +156,7 @@
     <ClInclude Include="clsFindUserScreen.h" />
     <ClInclude Include="clsInputValidate.h" />
     <ClInclude Include="clsListUsersScreen.h" />
+    <ClInclude Include="clsLoginRegisterScreen.h" />
     <ClInclude Include="clsLoginScreen.h" />
     <ClInclude Include="clsMainScreen.h" />
     <ClInclude Include="clsManageUserScreen.h" />
@@ -183,6 +184,7 @@
     <ClInclude Include="clsUser.h" />
     <ClInclude Include="clsUserData.h" />
     <ClInclude Include="clsUserService.h" />
+    <ClInclude Include="clsUtil.h" />
     <ClInclude Include="Global.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

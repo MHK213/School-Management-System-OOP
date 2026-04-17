@@ -15,6 +15,7 @@
 #include "clsReportScreen.h"
 #include "clsManageUserScreen.h"
 #include "Global.h"
+#include "clsLoginRegisterScreen.h"
 
 using namespace std;
 
@@ -24,11 +25,11 @@ private:
 	enum enMainMenuOption {
 		enShowStudentsList = 1, enAddNewStudent = 2, enDeleteStudent = 3, enUpdateStudent = 4,
 		enFindStudent = 5, enManageTeachers = 6, enManageCourses = 7, enManageEnrollments = 8, enReports = 9,
-		enManageUsers = 10, enLogout = 11 };
+		enManageUsers = 10, enLoginRegister = 11, enLogout = 12 };
 
 	static enMainMenuOption _ReadMainMenuOption() {
-		cout << setw(37) << left << "" << "Choose what do you want to do ? [1 to 11] ? ";
-		short MainMenuChoice = clsInputValidate::ReadShortNumberBetween(1, 11, "Enter a Number between 1 and 11? ");
+		cout << setw(37) << left << "" << "Choose what do you want to do ? [1 to 12] ? ";
+		short MainMenuChoice = clsInputValidate::ReadShortNumberBetween(1, 12, "Enter a Number between 1 and 12? ");
 
 		return enMainMenuOption(MainMenuChoice);
 	}
@@ -77,6 +78,10 @@ private:
 
 	static void _ShowManageUserScreen() {
 		clsManageUserScreen::ShowManageUsersMenu();
+	}
+
+	static void _ShowLoginRegisterScreen() {
+		clsLoginRegisterScreen::ShowLoginRegisterList();
 	}
 
 	static void _Logout() {
@@ -145,6 +150,12 @@ private:
 			_GoBackToMainMenu();
 			break;
 		}
+		case enLoginRegister: {
+			system("cls");
+			_ShowLoginRegisterScreen();
+			_GoBackToMainMenu();
+			break;
+		}
 		case enLogout: {
 			system("cls");
 			_Logout();
@@ -175,7 +186,8 @@ public:
 		cout << setw(37) << left << "" << "\t[8] Manage Enrollments.\n";
 		cout << setw(37) << left << "" << "\t[9] Reports.\n";
 		cout << setw(37) << left << "" << "\t[10] Manage Users.\n";
-		cout << setw(37) << left << "" << "\t[11] Logout.\n";
+		cout << setw(37) << left << "" << "\t[11] Login Register.\n";
+		cout << setw(37) << left << "" << "\t[12] Logout.\n";
 		cout << setw(37) << left << "" << "===========================================" << endl;
 
 		_PerformMainMenuOption(_ReadMainMenuOption());
