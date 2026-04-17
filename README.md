@@ -16,22 +16,23 @@ It also includes a login system with encrypted passwords and a login/register tr
 ---
 
 ## 🏗️ Project Architecture
-The project follows a layered architecture to ensure clean separation of concerns:
 
-- **Core Layer**
-  - Entities like `Student`, `Teacher`, `Course`, `Enrollment`, `User`
+The project follows a layered architecture:
+
+- **Core Layer (Entities)**
+  - Represents system objects (Student, Course, etc.)
 
 - **Data Layer**
-  - Handles file storage and retrieval (`Load`, `Save`, `Convert`)
+  - Handles file storage and conversion
 
 - **Service Layer**
-  - Business logic (validation, rules, statistics, operations)
+  - Contains business logic and rules
 
-- **Screen Layer (UI)**
-  - Console-based menus and interaction screens
+- **UI Layer (Screens)**
+  - Handles user interaction
 
 - **Global Layer**
-  - Shared variables like `CurrentUser`
+  - Stores shared application state (e.g., CurrentUser)
 
 ---
 
@@ -63,8 +64,10 @@ The project follows a layered architecture to ensure clean separation of concern
 ### 🔐 Authentication System
 - Login / Logout
 - Password encryption
-- User permissions system
+- User permissions system (RBAC)
 - Access control for screens
+- Login attempt limit (max 3 tries)
+- Temporary account lock after multiple failed login attempts
 
 ### 📜 Login Register
 - Stores login history (date, username, encrypted password)
@@ -87,9 +90,10 @@ The project follows a layered architecture to ensure clean separation of concern
 ## 🗂️ Project Structure
 
 ```
-📁 School Management System (OOP)
+📁 School Management System (C++)
 │
 ├── 📁 Core
+│   ├── clsPerson.h (Base Class)
 │   ├── clsStudent.h
 │   ├── clsTeacher.h
 │   ├── clsCourse.h
@@ -98,24 +102,78 @@ The project follows a layered architecture to ensure clean separation of concern
 │
 ├── 📁 Data
 │   ├── clsStudentData.h
+│   ├── clsTeacherData.h
 │   ├── clsCourseData.h
 │   ├── clsEnrollmentData.h
 │   └── clsUserData.h
 │
 ├── 📁 Service
 │   ├── clsStudentService.h
+│   ├── clsTeacherService.h
 │   ├── clsCourseService.h
 │   ├── clsEnrollmentService.h
 │   └── clsUserService.h
 │
-├── 📁 Screens
-│   ├── clsMainScreen.h
+├── 📁 UI - Screens
+│   │
+│   ├── 📁 Course
+│   │   ├── clsAddNewCourseScreen.h
+│   │   ├── clsCourseListByTeacherID.h
+│   │   ├── clsCourseMenuScreen.h
+│   │   ├── clsCoursesListScreen.h
+│   │   ├── clsDeleteCourseScreen.h
+│   │   ├── clsFindCourseScreen.h
+│   │   └── clsUpdateCourseScreen.h
+│   │
+│   ├── 📁 Enrollment
+│   │   ├── clsAssignGradeScreen.h
+│   │   ├── clsCourseStudentsScreen.h
+│   │   ├── clsDropEnrollmentScreen.h
+│   │   ├── clsEnrollmentMenuScreen.h
+│   │   ├── clsEnrollmentListScreen.h
+│   │   ├── clsEnrollStudentScreen.h
+│   │   ├── clsStudentCoursesScreen.h
+│   │   └── clsUpdateEnrollmentScreen.h
+│   │
+│   ├── 📁 Student
+│   │   ├── clsAddNewStudentScreen.h
+│   │   ├── clsDeleteStudentScreen.h
+│   │   ├── clsFindStudentScreen.h
+│   │   ├── clsStudentsListScreen.h
+│   │   └── clsUpdateStudentScreen.h
+│   │
+│   ├── 📁 Teacher
+│   │   ├── clsAddNewTeacherScreen.h
+│   │   ├── clsDeleteTeacherScreen.h
+│   │   ├── clsFindTeacherScreen.h
+│   │   ├── clsShowTeacherListBySpeciality.h
+│   │   ├── clsTeacherCoursesScreen.h
+│   │   ├── clsTeacherMenuScreen.h
+│   │   ├── clsTeacherListScreen.h
+│   │   └── clsUpdateTeacherScreen.h
+│   │
+│   ├── 📁 User
+│   │   ├── clsAddNewUserScreen.h
+│   │   ├── clsDeleteUserScreen.h
+│   │   ├── clsFindUserScreen.h
+│   │   ├── clsListUsersScreen.h
+│   │   ├── clsManageUserScreen.h
+│   │   └── clsUpdateUserScreen.h
+│   │
 │   ├── clsLoginScreen.h
+│   ├── clsLoginRegisterScreen.h
+│   ├── clsMainScreen.h
 │   ├── clsReportScreen.h
-│   └── clsManageUserScreen.h
+│   └── clsScreen.h
 │
 ├── 📁 Global
 │   └── Global.h
+│
+├── 📁 Lib
+│   ├── clsDate.h
+│   ├── clsInputValidate.h
+│   ├── clsString.h
+│   └── clsUtil.h
 │
 └── 📄 main.cpp
 ```
