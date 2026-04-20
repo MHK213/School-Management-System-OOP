@@ -1,6 +1,6 @@
-# 🎓 School Management System (C++)
+#  School Management System (C++)
 
-## 📌 Overview
+##  Overview
 This is a console-based School Management System built using C++.
 
 The system allows managing:
@@ -15,7 +15,7 @@ It also includes a login system with encrypted passwords and a login/register tr
 
 ---
 
-## 🏗️ Project Architecture
+##  Project Architecture
 
 The project follows a layered architecture:
 
@@ -36,32 +36,32 @@ The project follows a layered architecture:
 
 ---
 
-## ⚙️ Features
+##  Features
 
-### 👨‍🎓 Student Management
+###  Student Management
 - Add, update, delete, find students
 - View student list
 
-### 📚 Course Management
+###  Course Management
 - Add, update, delete courses
 - Track course capacity
 
-### 🧑‍🏫 Teacher Management
+###  Teacher Management
 - Manage teacher records
 
-### 📝 Enrollment System
+###  Enrollment System
 - Enroll students in courses
 - Drop enrollments
 - Assign grades
 - Track status (Active / Completed / Dropped)
 
-### 📊 Reports System
+###  Reports System
 - Total number of students, teachers, courses, enrollments
 - Most popular course
 - Most active student
 - Full courses report
 
-### 🔐 Authentication System
+###  Authentication System
 - Login / Logout
 - Password encryption
 - User permissions system (RBAC)
@@ -69,12 +69,12 @@ The project follows a layered architecture:
 - Login attempt limit (max 3 tries)
 - Temporary account lock after multiple failed login attempts
 
-### 📜 Login Register
+###  Login Register
 - Stores login history (date, username, encrypted password)
 
 ---
 
-## 🧠 Design Concepts Used
+## Design Concepts Used
 
 - Object-Oriented Programming (OOP)
 - Encapsulation
@@ -87,12 +87,12 @@ The project follows a layered architecture:
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
-📁 School Management System (C++)
+ School Management System (C++)
 │
-├── 📁 Core
+├──  Core
 │   ├── clsPerson.h (Base Class)
 │   ├── clsStudent.h
 │   ├── clsTeacher.h
@@ -100,23 +100,23 @@ The project follows a layered architecture:
 │   ├── clsEnrollment.h
 │   └── clsUser.h
 │
-├── 📁 Data
+├──  Data
 │   ├── clsStudentData.h
 │   ├── clsTeacherData.h
 │   ├── clsCourseData.h
 │   ├── clsEnrollmentData.h
 │   └── clsUserData.h
 │
-├── 📁 Service
+├──  Service
 │   ├── clsStudentService.h
 │   ├── clsTeacherService.h
 │   ├── clsCourseService.h
 │   ├── clsEnrollmentService.h
 │   └── clsUserService.h
 │
-├── 📁 UI - Screens
+├──  UI - Screens
 │   │
-│   ├── 📁 Course
+│   ├──  Course
 │   │   ├── clsAddNewCourseScreen.h
 │   │   ├── clsCourseListByTeacherID.h
 │   │   ├── clsCourseMenuScreen.h
@@ -125,7 +125,7 @@ The project follows a layered architecture:
 │   │   ├── clsFindCourseScreen.h
 │   │   └── clsUpdateCourseScreen.h
 │   │
-│   ├── 📁 Enrollment
+│   ├──  Enrollment
 │   │   ├── clsAssignGradeScreen.h
 │   │   ├── clsCourseStudentsScreen.h
 │   │   ├── clsDropEnrollmentScreen.h
@@ -135,14 +135,14 @@ The project follows a layered architecture:
 │   │   ├── clsStudentCoursesScreen.h
 │   │   └── clsUpdateEnrollmentScreen.h
 │   │
-│   ├── 📁 Student
+│   ├──  Student
 │   │   ├── clsAddNewStudentScreen.h
 │   │   ├── clsDeleteStudentScreen.h
 │   │   ├── clsFindStudentScreen.h
 │   │   ├── clsStudentsListScreen.h
 │   │   └── clsUpdateStudentScreen.h
 │   │
-│   ├── 📁 Teacher
+│   ├──  Teacher
 │   │   ├── clsAddNewTeacherScreen.h
 │   │   ├── clsDeleteTeacherScreen.h
 │   │   ├── clsFindTeacherScreen.h
@@ -152,7 +152,7 @@ The project follows a layered architecture:
 │   │   ├── clsTeacherListScreen.h
 │   │   └── clsUpdateTeacherScreen.h
 │   │
-│   ├── 📁 User
+│   ├──  User
 │   │   ├── clsAddNewUserScreen.h
 │   │   ├── clsDeleteUserScreen.h
 │   │   ├── clsFindUserScreen.h
@@ -166,50 +166,17 @@ The project follows a layered architecture:
 │   ├── clsReportScreen.h
 │   └── clsScreen.h
 │
-├── 📁 Global
+├──  Global
 │   └── Global.h
 │
-├── 📁 Lib
+├──  Lib
 │   ├── clsDate.h
 │   ├── clsInputValidate.h
 │   ├── clsString.h
 │   └── clsUtil.h
 │
-└── 📄 main.cpp
+└──  main.cpp
 ```
-
-
----
-
-## 🚀 How to Run
-
-1. Open project in Visual Studio (or any C++ compiler)
-2. Make sure all `.h` files are included
-3. Build the project
-4. Run `main.cpp`
-5. Login with a valid user
-
----
-
-## 📸 Screenshots (optional)
-
-- Login Screen
-- Main Menu
-- Reports Screen
-- Enrollment System
-
-*(images will be here later)*
-
----
-
-## 🔮 Future Improvements
-
-- Add GUI version (Qt / SFML / Web UI)
-- Database integration (MySQL / SQLite)
-- Export reports to PDF/Excel
-- Advanced analytics dashboard
-- Multi-language support
-- REST API version
 
 ---
 
